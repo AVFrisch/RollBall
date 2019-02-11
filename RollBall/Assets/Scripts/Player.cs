@@ -5,18 +5,25 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float speed = 1;
-
+	
+	private Rigidbody rb;
+	
+	void Start ()
+	{
+		rb = GetComponent<Rigidbody>();
+	}
+	
     //
-    private void FixedUpdate()
+    void FixedUpdate()
     {
 
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
         Vector3 move = new Vector3(moveHorizontal, 0, moveVertical);
-        Debug.Log(move);
+        //Debug.Log(move);
 
-        GetComponent<Rigidbody>().AddForce(move * speed);
+        rb.AddForce (move * speed);
     }
 
     
