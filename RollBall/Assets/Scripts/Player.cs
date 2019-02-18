@@ -22,6 +22,8 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
+
+
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
@@ -43,7 +45,6 @@ public class Player : MonoBehaviour
     void SetCountText()
     {
         countText.text = "Count: " + count.ToString();
-
         if (count >= 9)
         {
             winText.text = "You Win!";
