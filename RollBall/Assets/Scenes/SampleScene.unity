@@ -404,8 +404,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 25
+  dashSpeed: 20
   countText: {fileID: 1844306547}
   winText: {fileID: 1907642388}
+  dashCool: 30
 --- !u!4 &305470932
 Transform:
   m_ObjectHideFlags: 0
@@ -854,7 +856,7 @@ GameObject:
   - component: {fileID: 447927383}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
