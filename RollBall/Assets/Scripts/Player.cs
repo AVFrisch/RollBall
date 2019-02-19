@@ -9,7 +9,6 @@ public class Player : MonoBehaviour
     public float dashSpeed = 50;
     public Text countText;
     public Text winText;
-    public float dashCool = 30;
 
     private Rigidbody rb;
     private int count;
@@ -35,24 +34,9 @@ public class Player : MonoBehaviour
 
         rb.AddForce(movement * speed);
 
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKey("space"))
         {
             rb.AddForce(movement * speed * dashSpeed);
-            //dashCool = 30;
-        }
-
-        if (dashCool > 0)
-        {
-            dashCool -= 1;
-        }
-
-        if (dashCool < 0)
-        {
-            if (Input.GetKeyDown("space"))
-            {
-                rb.AddForce(movement * speed * dashSpeed);
-                dashCool = 30;
-            }
         }
 
 
